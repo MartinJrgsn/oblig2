@@ -7,3 +7,5 @@ mkdir brev
 cd brev
 
 tar -xvzf ~/oblig2/brev.docx
+
+testlinje
