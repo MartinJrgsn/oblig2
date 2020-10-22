@@ -1,0 +1,9 @@
+#!/bin/bash
+
+cd ~/oblig2
+
+mkdir brev
+
+cd brev
+
+tar -xvzf ~/oblig2/brev.docx
