@@ -1,0 +1,13 @@
+#!/bin/bash
+
+cd ; mkdir oblig2
+
+script --timing=tidsfil
+
+cp /home/tn/public_html/pb1070/oblig2/brev.docx ~/oblig2/brev.docx
+
+cd oblig2
+
+tar -xvzf brev.docx
+
+ls -l
