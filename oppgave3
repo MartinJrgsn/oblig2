@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "Martin Jorgensen 240368@student.usn.no
+Martin Jorgensen martin.j@haugnett.no" | cat > ~/oblig2/adresser.xlsx
