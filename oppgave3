@@ -1,4 +1,16 @@
 #!/bin/bash
 
-echo "Martin Jorgensen 240368@student.usn.no
-Martin Jorgensen martin.j@haugnett.no" | cat > ~/oblig2/adresser.xlsx
+mv ~/oblig2/brev/vedlegg/bilde1 ~/oblig2/brev/vedlegg/bilde1.png
+mv ~/oblig2/brev/vedlegg/bilde2 ~/oblig2/brev/vedlegg/bilde2.png
+
+for i in $(cat ~/oblig2/adresser.csv)
+do
+	Navn=$(echo $i | cut -f1 -d:)
+	Adresser=$(echo $i | cut -f2 -d:)
+	echo $Navn
+	echo $Adresser
+	cat ~/oblig2/brev/brev.txt | sed s/=mottager=/$Navn/g | sed s/=meg=/Phishermann/g | mutt $Adresser -s "This is the subject field" -a ~/oblig2/brev/vedlegg/bilde1.png ~/oblig2/brev/vedlegg/bilde2.png
+done
+
+mv ~/oblig2/brev/vedlegg/bilde1.png ~/oblig2/brev/vedlegg/bilde1
+mv ~/oblig2/brev/vedlegg/bilde2.png ~/oblig2/brev/vedlegg/bilde2
